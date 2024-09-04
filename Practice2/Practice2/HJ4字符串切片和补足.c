@@ -1,4 +1,8 @@
 #define _CRT_SECURE_NO_WARNINGS 1
+//难点：1.补足——可能超出且超出数目随机：分配空间
+//“补”，在末尾添加——通过指针直接定位
+//上述两个原因决定了流程为先分配空间，再复制原始字符串，再添加
+//2.切片——%.*s
 #include <stdio.h>  
 #include <string.h>  
 #include <stdlib.h>  

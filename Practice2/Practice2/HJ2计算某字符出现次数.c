@@ -1,4 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS 1
+//难点：忽略大小写——tolower函数或者ASCII码加减
 //#include <stdio.h>
 //#include <string.h>
 //int main() {

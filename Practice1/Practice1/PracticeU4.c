@@ -20,7 +20,7 @@
 //	printf("%d", b);
 //	return 0;
 //}
-//9题
+//9题 倒序输出一个正整数
 //如果需要正序输出，那么设置一个数组变量更好，否则就不用
 //int main()
 //{
@@ -48,30 +48,45 @@
 //	//	printf("%d\n", arr[i]);
 //	return 0;
 //}
-//习题11
-//修改了题目要求，从键盘输入任意个数字进行排序。
-int main() {
-	void selectionSort(int arr[], int n);
-	void printArray(int arr[], int n);
-	int arr[4] = { 8,35,6,1 };
-	selectionSort(arr, 4);
-	printArray(arr, 4);
-}
-void selectionSort(int arr[], int n) {
-	for (int i = 0; i < n - 1; i++) {
-		int minIndex = i;
-		for (int j = i + 1; j < n; j++) {
-			if (arr[minIndex] > arr[j])
-				minIndex = j;
-		}
-		if (minIndex != i) {
-		int temp = arr[i];
-		arr[i] = arr[minIndex];
-		arr[minIndex] = temp;
-		}
+// 方法2：改用递归方法
+// 顺序打印一个四位数=打印一个三位数+最后位
+// 结束标志是只有一位数
+void print(int x) {
+	if (x>9)
+	{
+		print(x / 10);
 	}
+	printf("%d\n", x % 10);
 }
-void printArray(int arr[],int n ) {
-	for (int i = 0; i < n; i++)
-		printf("%d ", arr[i]);
-}
+int main() {
+	int a;
+	scanf("%d", &a);
+	print(a);
+	return 0;
+ }
+//习题11
+//int main() {
+//	void selectionSort(int arr[], int n);
+//	void printArray(int arr[], int n);
+//	int arr[4] = { 8,35,6,1 };
+//	selectionSort(arr, 4);
+//	printArray(arr, 4);
+//}
+//void selectionSort(int arr[], int n) {
+//	for (int i = 0; i < n - 1; i++) {
+//		int minIndex = i;
+//		for (int j = i + 1; j < n; j++) {
+//			if (arr[minIndex] > arr[j])
+//				minIndex = j;
+//		}
+//		if (minIndex != i) {
+//		int temp = arr[i];
+//		arr[i] = arr[minIndex];
+//		arr[minIndex] = temp;
+//		}
+//	}
+//}
+//void printArray(int arr[],int n ) {
+//	for (int i = 0; i < n; i++)
+//		printf("%d ", arr[i]);
+//}
