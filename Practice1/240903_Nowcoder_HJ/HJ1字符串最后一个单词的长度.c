@@ -5,7 +5,7 @@
 #include <string.h>
 int main() {
 	char str[5000];
-	int num;
+	int num=0;
 
 	while (scanf("%s", str) != EOF)
 		num = strlen(str);

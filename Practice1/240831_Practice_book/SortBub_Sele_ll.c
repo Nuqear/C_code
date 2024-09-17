@@ -32,7 +32,7 @@ void appendNode(Node** head_ref, int new_data) {
     }
 
     // 6. 如果链表不为空，找到链表的最后一个节点  
-    Node* last = *head_ref;
+    Node* last = *head_ref;//需要另外建立一个临时变量，因为链表非空，头结点不能改
     while (last->next != NULL) {
         last = last->next;
     }

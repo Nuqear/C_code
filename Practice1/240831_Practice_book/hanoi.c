@@ -5,16 +5,20 @@ int hanoi(int n, char a, char b, char c)
 	static int count = 0;
 	if (n==1)
 	{
-		printf("%c-->%c\n", a, c);
+		printf("%c-->%c\t", a, c);
 		
 	}
 	else
 	{
 		hanoi(n - 1, a, c, b);
-		printf("%c-->%c\n", a, c);
+		printf("%c-->%c\t", a, c);
 		hanoi(n - 1, b, a, c);
 	}
 	count++;
+	if (count%10==0)
+	{
+		printf("\n");
+	}
 	return count;
 }
 int main()
